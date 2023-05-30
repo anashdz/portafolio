@@ -1,0 +1,72 @@
+<!--Informa al navegador sobre la version de HTML-->
+<!DOCTYPE html>
+<!--Lenguaje de la pagina-->
+<html lang="es">
+
+<head>
+    <!--Formato de codificacion de carcteres-->
+    <meta charset="UTF-8">
+    <!--Obeter informacion sobre el encabezado de mensaje de respuesta HTTP-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--Ajuste del ancho de la pantalla segun el dispositivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link de llamado del archivo CSS-->
+    <link rel="stylesheet" href="color.css">
+    <!--Link de llamado del archivo JavaScript-->
+    <script type="text/javascript" src="algoritmo.js"></script>
+    <!--Nombre de la pagina mostrado en la pestaña-->
+    <title>Encriptador de Texto Js</title>
+</head>
+<body>
+
+    <!--Titulo de la pagina-->
+    <h1 class="titulo"><span>Pagina de Encriptado JavaScript</span></h1>
+    
+    <!--clase main identificada para darle formato a la pagina dentro del css-->
+    <main class="main">
+        <!--Seleccion echa para dar formato a las cajas de texto-->
+        <section class="cajaTexto">
+            <!--Formato de la caja de texto de entrada con el texto " Ingrese el texto aqui"-->
+            <textarea class="cajaTexto" name="textoEntrada" id="textoEntrada" placeholder="Ingrese el texto aqui" rows="8" cols="50"></textarea>
+            <!--Etiqueta creada para darle formato a el parrafo en el rodapie de la caja de texto de entrada-->
+            <footer class="rodapie">
+                <!--Especificamos que solo se aceptan letras sin acentos ya que en el Js convertiremos las letras a minusculas-->
+                <p>Solo letras sin acentos</p>
+            </footer>
+
+            <!--Boton de Encriptado en la pagina-->
+            <input class="btn" type="button" value="Encriptar" id="botonEncriptado">
+            <!--Boton de Desencriptado-->
+            <input class="btn" type="button" value="Desencriptar" id="botonDesencriptado">
+        </section>
+   
+        <!--Seleccion echa para dar formato a las cajas de texto-->
+        <selection class="cajaTexto">
+            <!--Etiqueta para dientificar la caja de salida de texto-->
+            <label for="cajaTexto">Mensaje encriptado:</h2></label>
+            <!--Formato de la caja de salida de texto-->
+            <textarea class="cajaTexto" name="textoSalida" id="textoSalida"rows="8" cols="50"></textarea>              
+            <!--Boton de copiado del texto de salida-->
+            <button class="btn" type="button" id="botonCopiar">Copiar</button>
+        </selection>
+    </main>
+
+    <!--Rodapie de la pagina con mis datos-->
+    <footer class="rodapie">
+        <p> Ana Laura Sandoval H. </p>
+
+    </footer>
+</body>
+<!--Script de llamado al uso funcional de los botones creados, es decir poder hacer click en ellos-->
+<script>
+    var btn = document.querySelector("#botonEncriptado");
+    btn.onclick = encriptar;
+
+    var btn2 = document.querySelector("#botonDesencriptado");
+    btn2.onclick = desencriptar;
+
+    var btn3 = document.querySelector("#botonCopiar");
+    btn3.onclick = copiar;
+
+</script>
+</html>
